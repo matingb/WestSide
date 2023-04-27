@@ -1,0 +1,12 @@
+.titulo {
+    text-align: center;
+}
+
+.dias-container {
+    display: flex;
+    justify-content: center;
+
+    app-dia {
+        padding: 20px;
+    }
+}
