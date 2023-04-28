@@ -8,7 +8,6 @@ import { Clase } from 'src/app/models/clases.model';
 })
 export class ClassDetailsComponent {
 
-  @Input()
-  clase!: Clase;
+  @Input() clase: Clase = new Clase("", "", []);
 
 }
