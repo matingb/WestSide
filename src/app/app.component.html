@@ -1,7 +1,7 @@
 <h1 class="titulo">WEST SIDE</h1>
 <h1 class="titulo">
-  {{ getDiaDeSemana() }}
+  {{ diaActual.nombre }}
 </h1>
 <div class="clases-container">
-  <gym-class-details *ngFor="let clase of clases" [clase]="clase"></gym-class-details>
+  <gym-class-details *ngFor="let clase of diaActual.clases" [clase]="clase"></gym-class-details>
 </div>
