@@ -1,10 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Dia } from './models/dia.model';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { Clase } from './models/clases.model';
 import { By } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('AppComponent', () => {
 
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        MatIconModule
       ],
       declarations: [
         AppComponent,
