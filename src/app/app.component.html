@@ -1,6 +1,7 @@
 <h1 class="titulo">WEST SIDE</h1>
-<div class="dias-container">
-  <app-dia></app-dia>
-  <app-dia></app-dia>
-  <app-dia></app-dia>
+<h1 class="titulo">
+  {{ getDiaDeSemana() }}
+</h1>
+<div class="clases-container">
+  <gym-class-details *ngFor="let clase of clases" [clase]="clase"></gym-class-details>
 </div>

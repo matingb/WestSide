@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="header">
+    <span>{{ clase.horario }}</span>
+    <span> {{ clase.tipo }}</span>
+  </div>
+  <div *ngFor="let alumno of clase.alumnos" class="alumno">{{ alumno }}</div>
+</div>

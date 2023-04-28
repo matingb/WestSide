@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DiaComponent } from './dia.component';
+import { ClassDetailsComponent } from './class-details.component';
 
 describe('DiaComponent', () => {
-  let component: DiaComponent;
-  let fixture: ComponentFixture<DiaComponent>;
+  let component: ClassDetailsComponent;
+  let fixture: ComponentFixture<ClassDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DiaComponent ]
+      declarations: [ ClassDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiaComponent);
+    fixture = TestBed.createComponent(ClassDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,12 +1,13 @@
 .titulo {
+    color: #FFF;
     text-align: center;
 }
 
-.dias-container {
+.clases-container {
     display: flex;
     justify-content: center;
 
-    app-dia {
-        padding: 20px;
+    gym-class-details {
+        margin: 10px;
     }
 }

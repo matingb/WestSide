@@ -1,6 +1,6 @@
 .container {
-    width: 300px;
-    min-height: 450px;
+    width: 250px;
+    min-height: 400px;
     background-color: #fff;
     border-radius: 30px;
     overflow: hidden;
@@ -8,7 +8,7 @@
     font-family: sans-serif;
 
     .header {
-        height: 45px;
+        height: 30px;
         background-color: #8e3bff;
         color: #fff;
         padding: 20px;
@@ -17,18 +17,10 @@
         font-weight: bold;
     }
 
-    .horarios {
-        padding: 15px;
-
-        .horario {
-            padding: 5px 0px;
-            font-weight: bold;
-
-            .alumno {
-                padding: 0px 10px;
-                font-weight: 400;
-            }
-        }
+    .alumno {
+        padding: 5px 15px;
+        font-weight: 400;
+        font-weight: bold;
     }
 
 }
