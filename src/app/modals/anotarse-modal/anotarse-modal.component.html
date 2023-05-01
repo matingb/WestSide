@@ -1,3 +1,13 @@
-<button class="btn-close btn-close-grey" (click)="cerrar()"></button>
-<button (click)="cerrar()">Cancelar</button>
-<button>Anotarse</button>
+<div class="container">
+    <button class="btn-close" (click)="cerrar()"></button>
+    <h4>Anotarse</h4>
+    <h6>Calistenia 10:00</h6>
+    <div class="form-container">
+        <input class="form-control" type="text" placeholder="Nombre"/>
+        <label class="form-label">Nombre</label>
+    </div>
+    <div class="button-container">
+        <button (click)="cerrar()">Cancelar</button>
+        <button>Anotarse</button>
+    </div>
+</div>

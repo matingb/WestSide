@@ -4,5 +4,11 @@ body {
     padding: 40px !important;
     text-align: -webkit-center !important;
     text-align: -moz-center !important;
-    font-family: sans-serif !important;
+    font-family: "quickSand" !important;
+}
+
+* {
+    &:focus {
+        box-shadow: none !important;
+    }
 }
