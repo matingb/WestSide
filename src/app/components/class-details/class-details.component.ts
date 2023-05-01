@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Clase } from 'src/app/models/clases.model';
 import { MatDialog } from '@angular/material/dialog';
+import { AnotarseModalComponent } from 'src/app/modals/anotarse-modal/anotarse-modal.component';
+import { Alumno } from 'src/app/models/alumno.model';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'gym-class-details',
@@ -11,22 +14,20 @@ export class ClassDetailsComponent {
 
   @Input() clase: Clase = new Clase("", "", []);
 
-  constructor(public dialog: MatDialog) {}
-
-  openModal() {
-    const dialogRef = this.dialog.open(MiModalComponent, {
-      data: {parametro: 'valor del parametro'}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  constructor(private modalService: NgbModal) {}
 
   anotarse() {
-    this.clase.alumnos.push("Nicolas Fuentes");
+    const modalRef = this.modalService.open(AnotarseModalComponent, { centered: true, size: 'md', backdrop : 'static', keyboard : false});
+
+    modalRef.result.then((result) => {
+      console.log(result);
+      // Aquí puedes ejecutar la lógica que necesites con los datos del formulario
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
-  desanotarme(alumno: string) {
+  desanotarme(alumno: Alumno) {
     let index = this.clase.alumnos.indexOf(alumno); 
 
     if (index !== -1) {
