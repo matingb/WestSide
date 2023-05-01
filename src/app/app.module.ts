@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { MatIconModule } from '@angular/material/icon';
+import { AnotarseModalComponent } from './modals/anotarse-modal/anotarse-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClassDetailsComponent
+    ClassDetailsComponent,
+    AnotarseModalComponent
   ],
   imports: [
     BrowserModule,
