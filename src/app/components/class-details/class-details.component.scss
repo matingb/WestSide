@@ -19,13 +19,20 @@
 
     .info-container {
         min-height: 320px;
+        padding-top: 10px;
         display: flex;
         flex-direction: column;
 
         .alumno {
-            padding: 5px 15px;
+            display: flex;
+            padding: 4px 15px;
             font-weight: 400;
             font-weight: bold;
+            align-items: center;
+            
+            mat-icon {
+                margin-left: auto;
+            }
         }
         
         .button-container {

@@ -4,7 +4,10 @@
     <span> {{ clase.tipo }}</span>
   </div>
   <div class="info-container">
-    <div *ngFor="let alumno of clase.alumnos" class="alumno">{{ alumno }}</div>
+    <div *ngFor="let alumno of clase.alumnos" class="alumno">
+      <div>{{ alumno }}</div>
+      <mat-icon fontIcon="delete" (click)="desanotarme(alumno)"></mat-icon>
+    </div>
     <div class="button-container">
       <button class="anotarse" (click)="anotarse()">Anotarse</button>
     </div>

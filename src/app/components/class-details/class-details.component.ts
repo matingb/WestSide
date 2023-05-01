@@ -13,4 +13,12 @@ export class ClassDetailsComponent {
   anotarse() {
     this.clase.alumnos.push("Nicolas Fuentes");
   }
+
+  desanotarme(alumno: string) {
+    let index = this.clase.alumnos.indexOf(alumno); 
+
+    if (index !== -1) {
+      this.clase.alumnos.splice(index, 1);
+    }
+  }
 }
