@@ -1,6 +1,6 @@
 .container {
     width: 250px;
-    min-height: 400px;
+    min-height: 350px;
     background-color: #fff;
     border-radius: 30px;
     overflow: hidden;
@@ -17,10 +17,38 @@
         font-weight: bold;
     }
 
-    .alumno {
-        padding: 5px 15px;
-        font-weight: 400;
-        font-weight: bold;
-    }
+    .info-container {
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
 
+        .alumno {
+            padding: 5px 15px;
+            font-weight: 400;
+            font-weight: bold;
+        }
+        
+        .button-container {
+            padding: 15px;
+            margin-top: auto;
+            
+            .anotarse {
+                width: 100%;
+                height: 35px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 20px;
+                background-color: #8e3bff;
+                transition: all 0.5s ease;
+            
+                &:hover {
+                    color: #8e3bff;
+                    background-color: #FFF;
+                    border: solid 1px #8e3bff;
+                }
+            }
+        }
+    }
 }

@@ -10,4 +10,7 @@ export class ClassDetailsComponent {
 
   @Input() clase: Clase = new Clase("", "", []);
 
+  anotarse() {
+    this.clase.alumnos.push("Nicolas Fuentes");
+  }
 }

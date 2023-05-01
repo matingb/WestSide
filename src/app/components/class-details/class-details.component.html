@@ -3,6 +3,10 @@
     <span>{{ clase.horario }}</span>
     <span> {{ clase.tipo }}</span>
   </div>
-  <div *ngFor="let alumno of clase.alumnos" class="alumno">{{ alumno }}</div>
-  <mat-icon>account_circle</mat-icon>
+  <div class="info-container">
+    <div *ngFor="let alumno of clase.alumnos" class="alumno">{{ alumno }}</div>
+    <div class="button-container">
+      <button class="anotarse" (click)="anotarse()">Anotarse</button>
+    </div>
+  </div>
 </div>
