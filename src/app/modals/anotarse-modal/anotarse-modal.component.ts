@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Alumno } from 'src/app/models/alumno.model';
 
 @Component({
   selector: 'gym-anotarse-modal',
@@ -7,7 +8,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./anotarse-modal.component.scss']
 })
 export class AnotarseModalComponent {
-  
+
+  @Input() clase: string = "";
+  @Output() formSubmit: EventEmitter<Alumno> = new EventEmitter<Alumno>();
+
+  public alumno: Alumno = new Alumno("");
+    
   constructor(
     public activeModal: NgbActiveModal
   ) {}
@@ -16,4 +22,8 @@ export class AnotarseModalComponent {
     this.activeModal.close();
   }
 
+  anotarse() {
+    this.formSubmit.next(this.alumno);
+    this.activeModal.close();
+  }
 }

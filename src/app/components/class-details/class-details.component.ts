@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Clase } from 'src/app/models/clases.model';
-import { MatDialog } from '@angular/material/dialog';
 import { AnotarseModalComponent } from 'src/app/modals/anotarse-modal/anotarse-modal.component';
 import { Alumno } from 'src/app/models/alumno.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -12,19 +11,17 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ClassDetailsComponent {
 
-  @Input() clase: Clase = new Clase("", "", []);
+  @Input() clase: Clase;
 
   constructor(private modalService: NgbModal) {}
 
   anotarse() {
-    const modalRef = this.modalService.open(AnotarseModalComponent, { centered: true, size: 'md', backdrop : 'static', keyboard : false});
-
-    modalRef.result.then((result) => {
-      console.log(result);
-      // Aquí puedes ejecutar la lógica que necesites con los datos del formulario
-    }).catch((error) => {
-      console.log(error);
-    });
+    const modalRef = this.modalService.open(AnotarseModalComponent, { centered: true, size: 'sm', backdrop : 'static', keyboard : false});
+    modalRef.componentInstance.clase = `${this.clase.tipo} ${this.clase.horario}`;
+    
+    modalRef.componentInstance.formSubmit.subscribe((alumnoNuevo: any) => {
+      this.clase.alumnos.push(alumnoNuevo);
+    })
   }
 
   desanotarme(alumno: Alumno) {

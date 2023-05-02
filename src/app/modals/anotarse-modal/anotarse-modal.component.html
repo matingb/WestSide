@@ -1,13 +1,13 @@
 <div class="container">
     <button class="btn-close" (click)="cerrar()"></button>
     <h4>Anotarse</h4>
-    <h6>Calistenia 10:00</h6>
+    <h6>{{ clase }}</h6>
     <div class="form-container">
-        <input class="form-control" type="text" placeholder="Nombre"/>
+        <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="alumno.nombre"/>
         <label class="form-label">Nombre</label>
     </div>
     <div class="button-container">
         <button (click)="cerrar()">Cancelar</button>
-        <button>Anotarse</button>
+        <button (click)="anotarse()">Anotarse</button>
     </div>
 </div>
